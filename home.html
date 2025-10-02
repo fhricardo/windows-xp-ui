@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows XP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Janela que exibe conteúdos -->
+    <div class="window" id="myWindow">
+        <div class="titleBar" id="titleBar">
+            <span>Minha Janela</span>
+            <button class="close" onclick="closeWindow()">&times;</button>
+        </div>
+        <div class="contents" id="contents">
+            <p>Arraste, redimensione e feche essa janela.</p>
+        </div>
+    </div>
+    <!-- Menu iniciar -->
+    <div id="start-menu" class="hide">
+        <div class="user">
+
+        </div>
+        <div class="mid">
+            <div class="left">
+                <div class="l-top">
+                    <div class="l-item"><img src="assets/ico-users.ico" alt="">Usuários</div>
+                </div>
+                <div class="hr"></div>
+                <div class="l-item-bold">
+                    Todos os Programas <img src="assets/ico-all-prog.ico" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <div class="r-item-bold"
+                    onclick="openWindow('meu computador','Você abriu uma janela que pode ser arrastada e redimensionada!')">
+                    <img src="assets/ico-computer.ico" alt="">Meu computador</div>
+                <div class="r-item-bold"><img src="assets/ico-folder-doc.ico" alt="">Cadastro</div>
+                <div class="r-item-bold"><img src="assets/ico-list.ico" alt="">Listar Usuários</div>
+                <div class="hr"></div>
+                <div class="r-item"><img src="assets/ico-network.ico" alt="">Rede</div>
+            </div>
+        </div>
+        <div class="logout">
+            <div class="logoff">
+                <button><img src="assets/ico-logoff.ico" alt="">Sair</button>
+
+            </div>
+            <div class="shutdown">
+                <a href="shutdown.html"><button><img src="assets/ico-shutdown.ico" alt="">Desligar</button></a>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Barra de Tarefas -->
+    <footer>
+        <div class="task-bar">
+            <button id="start-btn"><img src="assets/logo-start-button.webp" alt="Start">iniciar</button>
+        </div>
+        <div class="tray">
+            <div class="icons">
+                <div class="icon">
+                    <img src="assets/ico-printer.ico" alt="" title="1 documento na fila">
+                </div>
+                <div class="icon">
+                    <img src="assets/ico-network.ico" alt="">
+                </div>
+                <div class="icon">
+                    <img src="assets/ico-volume.ico" alt="">
+                </div>
+            </div>
+            <div class="clock">
+                <p id="clock"></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Esse script reproduz o som ao entrar
+        window.addEventListener("load", () => {
+            let ref = document.referrer; // URL da página anterior
+
+            // Verifica se a URL contém "pagina1.html"
+            if (ref.includes("index.html")) {
+                let audio = new Audio("assets/audio/win-xp-startup.mp3");
+                audio.play()
+                    .then(() => console.log("Som tocando!"))
+                    .catch(err => console.log("Reprodução bloqueada:", err));
+            }
+        });
+    </script>
+</body>
+
+</html>
