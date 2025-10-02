@@ -30,6 +30,7 @@ body {
     width: 100%;
     height: 100dvh;
     background-image: url(../assets/wallpaper.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -146,7 +147,7 @@ footer {
     align-items: center;
     position: fixed;
     bottom: 0;
-    z-index: 10000;
+    z-index: 8888;
 
     .task-bar {
         flex-grow: 1;
@@ -494,7 +495,7 @@ footer {
 }
 
 .inactive {
-    background: linear-gradient(var(--beige), var(--beige)) padding-box, linear-gradient(var(--lighter-blue), var(--inactive-blue)3px, var(--inactive-blue)30px, var(--blue)) border-box;
+    background: linear-gradient(var(--beige), var(--beige)) padding-box, linear-gradient(var(--lighter-blue), var(--inactive-blue)3px, var(--inactive-blue)30px, var(--lighter-blue)) border-box;
 
     .titleBar {
         font-size: 12px;
