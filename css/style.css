@@ -23,6 +23,7 @@
     --black: #333333;
     --gray: #666666;
     --beige: #ece9d8;
+    --inactive-blue: #7897de;
 }
 
 body {
@@ -151,6 +152,8 @@ footer {
         flex-grow: 1;
         height: 32px;
         background-image: linear-gradient(var(--lighter-blue), var(--light-blue) 15%, var(--light-blue) 85%, var(--dark-blue));
+        display: flex;
+        align-items: center;
 
         #start-btn {
             height: 32px;
@@ -161,6 +164,7 @@ footer {
             align-items: center;
             gap: 5px;
             padding: 0px 24px 0 8px;
+            margin-right: 8px;
 
             border-top-right-radius: 20% 80%;
             border-bottom-right-radius: 20% 110%;
@@ -178,6 +182,54 @@ footer {
                 filter: drop-shadow(0px 0px 8px var(--dark-green));
             }
 
+        }
+
+        .activeWindow {
+            width: 160px;
+            height: 26px;
+            padding: 0 8px 0 28px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            font-size: 12px;
+            color: var(--white);
+            gap: 4px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px var(--black) inset, 0px 0px 1px var(--black);
+            background-color: #33333330;
+            background-image: url(../assets/ico-folder.ico);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: 4px center;
+
+            img {
+                width: 20px;
+                display: block;
+            }
+        }
+
+        .inactiveWindow {
+            width: 160px;
+            height: 26px;
+            background-color: #fafafa30;
+            border-radius: 4px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            color: var(--white);
+            font-size: 12px;
+            padding: 0 8px 0 28px;
+            gap: 4px;
+            box-shadow: 1px 1px 4px #f8f8f840 inset, 0px 0px 1px var(--black);
+            background-image: url(../assets/ico-folder.ico);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: 4px center;
+
+            img {
+                width: 20px;
+                display: block;
+            }
         }
     }
 
@@ -438,20 +490,30 @@ footer {
     resize: both;
     overflow: auto;
     z-index: 999;
-    display: none;
+    display: flex;
 }
 
-/* Container da janela */
-.janela {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 300px;
-    height: 200px;
-    background: #333;
-    border: 2px solid #555;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+.inactive {
+    background: linear-gradient(var(--beige), var(--beige)) padding-box, linear-gradient(var(--lighter-blue), var(--inactive-blue)3px, var(--inactive-blue)30px, var(--blue)) border-box;
+
+    .titleBar {
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', sans-serif;
+        color: var(--white);
+        text-shadow: 0px 0px 4px var(--dark-blue);
+        padding: 0 2px 0 6px;
+        width: 100%;
+        height: 28px;
+        background-image: linear-gradient(var(--inactive-blue) 1px, var(--lighter-blue));
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 /* Cabeçalho para arrastar */

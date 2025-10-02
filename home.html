@@ -11,7 +11,7 @@
 
 <body>
     <!-- Janela que exibe conteúdos -->
-    <div class="window" id="myWindow">
+    <!-- <div class="window" id="myWindow">
         <div class="titleBar" id="titleBar">
             <span id="titleText"></span>
             <button class="close" onclick="closeWindow()">&times;</button>
@@ -19,7 +19,7 @@
         <div class="contents" id="contents">
             <p>Arraste, redimensione e feche essa janela.</p>
         </div>
-    </div>
+    </div> -->
     <!-- Menu iniciar -->
     <div id="start-menu" class="hide">
         <div class="user">
@@ -36,11 +36,11 @@
                 </div>
             </div>
             <div class="right">
-                <div class="r-item-bold"
-                    onclick="openWindow('Meu computador','Você abriu uma janela que pode ser arrastada e redimensionada!')">
+                <div class="r-item-bold" onclick="newWindow('Meu computador', 'Conteúdo da primeira janela')">
                     <img src="assets/ico-computer.ico" alt="">Meu computador
                 </div>
-                <div class="r-item-bold"><img src="assets/ico-folder-doc.ico" alt="">Cadastro</div>
+                <div class="r-item-bold" onclick="newWindow('Meus documentos', 'Conteúdo da segunda janela')"><img
+                        src="assets/ico-folder-doc.ico" alt="">Meus documentos</div>
                 <div class="r-item-bold"><img src="assets/ico-list.ico" alt="">Listar Usuários</div>
                 <div class="hr"></div>
                 <div class="r-item"><img src="assets/ico-network.ico" alt="">Rede</div>
@@ -62,6 +62,7 @@
     <footer>
         <div class="task-bar">
             <button id="start-btn"><img src="assets/logo-start-button.webp" alt="Start">iniciar</button>
+
         </div>
         <div class="tray">
             <div class="icons">
