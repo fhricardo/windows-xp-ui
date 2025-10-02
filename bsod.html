@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Screen of Death - Microsoft Windows</title>
+    <link rel="stylesheet" href="css/bsod.css">
+    <script src="js/bsod.js" defer></script>
+</head>
+
+<body>
+    <div class="bsod">
+        <img src="assets/bsod.png" alt="Blue screen of death">
+    </div>
+    <script>
+        document.addEventListener('keydown', (event) => {
+            window.location.href = 'shutdown.html'
+        });
+    </script>
+</body>
+
+</html>

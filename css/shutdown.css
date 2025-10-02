@@ -2,13 +2,14 @@
     width: 100%;
     height: 100dvh;
     background-color: #33333340;
-    backdrop-filter: grayscale(.9);
     z-index: 9999;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 5s;
+    /* transition: 4s; */
+    animation: bgsat 3s linear 1s 1 normal forwards;
+
 
     .shutdownBTNS {
         width: 310px;
@@ -51,9 +52,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            gap: 12px;
 
             .btn {
+                width: 74px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -88,6 +90,16 @@
     }
 }
 
+@keyframes bgsat {
+    from {
+        backdrop-filter: grayscale(0);
+    }
+
+    to {
+        backdrop-filter: grayscale(0.9);
+    }
+}
+
 #logOutScreen {
     width: 100%;
     height: 100dvh;
@@ -102,7 +114,7 @@
     .central {
         width: 100%;
         height: calc(100dvh - 200px);
-        background-color: var(--light-blue);
+        background-image: radial-gradient(farthest-side at 0% 0%, var(--light-blue-screen), var(--light-blue));
         display: flex;
         flex-direction: column;
         justify-content: space-between;

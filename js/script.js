@@ -1,20 +1,3 @@
-function doubleDigit(n) {
-    return n.toString().padStart(2, '0');
-}
-
-function winClock() {
-    const now = new Date();
-    const hours = doubleDigit(now.getHours());
-    const minutes = doubleDigit(now.getMinutes());
-
-    // atualiza o conteúdo do <p id="clock">
-    document.getElementById('clock').textContent = `${hours}:${minutes}`;
-}
-
-winClock();
-
-setInterval(winClock, 1000);
-
 const startBtn = document.getElementById('start-btn');
 const menu = document.getElementById('start-menu');
 
@@ -79,7 +62,7 @@ function newWindow(titulo, conteudo) {
 
     // drag básico
     const titleBar = win.querySelector('.titleBar');
-    titleBar.style.cursor = "move";
+    //titleBar.style.cursor = "move";
     let dragging = false, startX = 0, startY = 0, startLeft = 0, startTop = 0;
 
     titleBar.addEventListener('mousedown', (e) => {
@@ -123,3 +106,9 @@ function activateWindow(winAtiva, taskBtnAtivo) {
     taskBtnAtivo.classList.remove('inactiveWindow');
     taskBtnAtivo.classList.add('activeWindow');
 }
+
+// BSOD
+const bsod = document.getElementById('userProfile')
+bsod.addEventListener('click', () => {
+    window.location.href = 'bsod.html'
+})
