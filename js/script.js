@@ -35,13 +35,14 @@ document.addEventListener('click', (e) => {
 //Window Drag & Drop - Resize
 const myWindow = document.getElementById("myWindow");
 const titleBar = document.getElementById("titleBar");
+const titleText = document.getElementById("titleText");
 const contents = document.getElementById("contents");
 
 // Abrir myWindow com conteúdo dinâmico
 function openWindow(title, texto) {
     contents.innerHTML = "<p>" + texto + "</p>";
     myWindow.style.display = "block";
-    titleBar.span.innerHTML = title
+    titleText.innerHTML = title
 }
 
 function closeWindow() {

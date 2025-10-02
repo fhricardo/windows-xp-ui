@@ -13,7 +13,7 @@
     <!-- Janela que exibe conteúdos -->
     <div class="window" id="myWindow">
         <div class="titleBar" id="titleBar">
-            <span>Minha Janela</span>
+            <span id="titleText"></span>
             <button class="close" onclick="closeWindow()">&times;</button>
         </div>
         <div class="contents" id="contents">
@@ -37,8 +37,9 @@
             </div>
             <div class="right">
                 <div class="r-item-bold"
-                    onclick="openWindow('meu computador','Você abriu uma janela que pode ser arrastada e redimensionada!')">
-                    <img src="assets/ico-computer.ico" alt="">Meu computador</div>
+                    onclick="openWindow('Meu computador','Você abriu uma janela que pode ser arrastada e redimensionada!')">
+                    <img src="assets/ico-computer.ico" alt="">Meu computador
+                </div>
                 <div class="r-item-bold"><img src="assets/ico-folder-doc.ico" alt="">Cadastro</div>
                 <div class="r-item-bold"><img src="assets/ico-list.ico" alt="">Listar Usuários</div>
                 <div class="hr"></div>
